@@ -26,14 +26,15 @@ body {
 /* Hero Section */
 .hero {
     background-image: url('./assets/hero.jpg');
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-position: center;
 }
 
 .hero h1 {
