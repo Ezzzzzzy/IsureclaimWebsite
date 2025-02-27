@@ -5,7 +5,6 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background: rgba(0, 0, 50, 0.9);
     padding: 15px 0;
 }
 
@@ -25,27 +24,31 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('./assets/hero.jpg');
+    background: linear-gradient(rgba(5, 78, 173, 0.795), rgba(40, 144, 255, 0.349)), url('./assets/hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     background-position: center;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
+.col-image {
+    width: 38rem;
+    height: 18rem;
+    object-fit: cover;
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.hero-text {
+    margin-bottom: 12rem;
+    margin-left: 10rem;
 }
 
 .tagline {
@@ -68,12 +71,6 @@ body {
 .btn-outline-light:hover {
     background: white;
     color: #007bff;
-}
-
-/* About Us Section */
-.about-section {
-    padding: 80px 0;
-    background: #f8f9fa;
 }
 
 .section-title {
@@ -155,7 +152,13 @@ body {
     padding: 30px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    height: 100%
 }
+
+.feature-card-footer {
+    padding: .75rem 1.25rem;
+    min-width:100%;
+  }
 
 .feature-card:hover {
     transform: translateY(-5px);
@@ -199,6 +202,13 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
+}
+
+.section-title2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .section-subtitle {
