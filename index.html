@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>InsureClaim - We wait so you don't have to</title>
+    <title>InsurClaim - We wait so you don't have to</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,6 +30,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -46,7 +49,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h1 class="display-5 text-primary m-0">InsureClaim</h1>
+                <h1 class="display-5 text-primary m-0">InsurClaim</h1>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -107,9 +110,9 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">About Us</p>
-                    <h1 class="display-5 mb-4">We help medical institutions eliminate cash flow delays in healthcare</h1>
+                    <h1 class="display-5 mb-4">We help medical institutions shorten waiting from months to hours in healthcare</h1>
                     <p class="mb-4">
-                        Hospitals shouldn’t have to wait 45-60 days for insurance payouts. InsureClaim bridges the gap by ensuring immediate payments while we take care of collecting from insurance providers.
+                        Hospitals shouldn’t have to wait <strong>30-90 days</strong> for insurance payouts. InsurClaim bridges the gap by ensuring immediate payments while we take care of collection from insurance providers.
                     </p>
                     <div class="border rounded p-4">
                         <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
@@ -176,7 +179,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Why Choose Us!</p>
                     <h1 class="display-5 mb-4">Get Paid in Just 24 Hours!</h1>
-                    <p class="mb-4">Why wait months for reimbursements? With InsureClaim, receive your payments within 24 hours—fast, reliable, and hassle-free!</p>
+                    <p class="mb-4">Why wait months for reimbursements? With InsurClaim, receive your payments within 24 hours—fast, reliable, and hassle-free!</p>
                 </div>
                 <div class="col-lg-6">
                     <div class="row g-4 align-items-center">
@@ -193,7 +196,7 @@
                                     <div class="feature-box border rounded p-4">
                                         <i class="fa fa-check fa-3x text-primary mb-3"></i>
                                         <h4 class="mb-3">Zero Financial Strain</h4>
-                                        <p class="mb-3">Free up your hospital’s cash flow and focus on providing quality care without financial roadblocks</p>
+                                        <p class="mb-3">Free up your institution's insurance receivables and focus on providing quality care without financial roadblocks</p>
                                     </div>
                                 </div>
                             </div>
@@ -235,11 +238,11 @@
                                     <h2 class="mb-4 ">Fast. Simple. Hassle-Free. Get Paid in Just 3 Steps!</h2>
                                     <p></p>
                                     <h4 class="text-primary"><span class=" text-primary me-3">1</span>Submit Your Claim</h4>
-                                    <p>Send your hospital's insurance claim to InsureClaim with the required details</p>
+                                    <p>Send your hospital's insurance claim to InsurClaim with the required details</p>
                                     <h4 class="text-primary"><span class=" text-primary me-3">2</span>Fast Verification & Payment</h4>
                                     <p>– We quickly verify your claim and deposit the funds into your account within 24 hours.</p>
                                     <h4 class="text-primary"><span class=" text-primary me-3">3</span>Insurance Pays Us Later</h4>
-                                    <p>– PInsureClaim handles the reimbursement process with the insurer, so you don’t have to wait</p>
+                                    <p>– Insurclaim handles the reimbursement process with the insurer, so you don’t have to wait</p>
                                 </div>
                             </div>
                         </div>
@@ -256,52 +259,90 @@
         <div class="container pt-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <div class="bg-white border rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                            <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Connect with us</p>
-                            <h3 class="display-5 mb-5">Don’t Let Delays Hold Your Hospital Back—Act Now</h3>
+                    <form id="contactForm">
+                        <div class="bg-white border rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                                <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Connect with us</p>
+                                <h3 class="display-5 mb-5">Don’t Let Delays Hold Your Hospital Back—Act Now</h3>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="mobile" placeholder="Your Mobile">
+                                        <label for="mobile">Your Mobile</label>
+                                    </div>
+                                </div> -->
+                                <div class="col-sm-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="mail" placeholder="Your Email">
-                                    <label for="mail">Your Email</label>
-                                </div>
-                            </div>
-                            <!-- <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="mobile" placeholder="Your Mobile">
-                                    <label for="mobile">Your Mobile</label>
-                                </div>
-                            </div> -->
-                            <div class="col-sm-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- Callback End -->
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var formEl = document.forms.BookPackageForm;
+            const form = new FormData(formEl);
+            const data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            };
+            fetch("https://script.google.com/macros/s/AKfycbxDkm3GarDb3VOivDnZQdDliHqJUI2s3UFGO7Pv__p2Wmbm1V9K97ANUEXp04YoLIZo/exec", {
+                redirect: "follow",
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8",
+                },
+            })
+            .then(response => response.text())
+            .then(data => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Thank you for connecting with us!',
+                    text: 'We will get back to you soon.',
+                    timer: 3000,
+                    timerProgressBar: true
+                });
+
+                // Clear form fields
+                document.getElementById("contactForm").reset();
+            })
+            .catch(error => console.error("Error!", error));
+        });
+    </script>
 
 
     <!-- Team Start -->
@@ -423,7 +464,7 @@
                     <h4 class="text-white mb-4">Our Office</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sampaloc Manila</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+63 944 844 9988</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@insureclaim.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@insurClaim.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
@@ -451,7 +492,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">InsureClaim</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">InsurClaim</a>, All Right Reserved.
                 </div>
             </div>
         </div>
@@ -474,6 +515,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
 </body>
+<!-- AKfycbxDkm3GarDb3VOivDnZQdDliHqJUI2s3UFGO7Pv__p2Wmbm1V9K97ANUEXp04YoLIZo -->
 
 </html>
